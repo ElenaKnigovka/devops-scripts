@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a simple command
+        run: echo "Hello, world! This is the devops-scripts CI workflow."
+
+      - name: Build (placeholder)
+        run: |
+          echo "Running a placeholder build step..."
+          echo "No actual build is performed here."
